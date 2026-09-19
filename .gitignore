@@ -1,2 +1,6 @@
 skills/
 node_modules/
+toolchain/
+debs/
+jarcraft-game/classes/
+jarcraft-game/manifest.mf

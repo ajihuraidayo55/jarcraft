@@ -1,0 +1,23 @@
+1 ICON "jarcraft.ico"
+
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "FileDescription",  "legacy jarcraft launcher"
+      VALUE "FileVersion",      "1.0.0.0"
+      VALUE "ProductName",      "jarcraft"
+      VALUE "ProductVersion",   "alpha 1.0.0"
+      VALUE "OriginalFilename", "legacy-jarcraft-launcher.exe"
+      VALUE "LegalCopyright",   ""
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
