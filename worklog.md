@@ -30,3 +30,20 @@ Stage Summary:
 - Root cause of download failures = platform workspace reset wiping files between turns
 - download/ = 3 verified files; primary recommendation: jarcraft.zip
 - Recovery procedure if reset happens again: git checkout / rebuild via scripts/ (env.sh, build_jar.sh, build_launcher.sh, make_icon.py, make_bundle.py, gui_smoke.sh)
+
+---
+Task ID: 8
+Agent: Super Z (main)
+Task: Push jarcraft repository to GitHub (ajihuraidayo55/jarcraft)
+
+Work Log:
+- User asked to push to https://github.com/ajihuraidayo55/jarcraft (public, EPL-2.0, initial commit with LICENSE only)
+- Two fine-grained PATs failed with 403 (Contents: read/write never granted; API write probe returned 404 confirming missing Contents permission)
+- Switched to GitHub OAuth device flow (client_id 178c6fc778ccc68e1d6a, scope=repo); first user code expired, second code DFE2-88ED authorized successfully
+- Merged remote initial commit (LICENSE, e812458) with --allow-unrelated-histories; dropped platform auto-checkpoint junk commit (scripts/_remote_check gitlink) via reset+re-merge
+- Pushed main to GitHub and verified via ls-remote
+- User advised to revoke both fine-grained PATs and the GitHub CLI OAuth grant after push
+
+Stage Summary:
+- GitHub repo now mirrors full local history: game source, launcher, scripts, deliverables, LICENSE (EPL-2.0)
+- GitHub serves as reset-resistant backup channel for deliverables
